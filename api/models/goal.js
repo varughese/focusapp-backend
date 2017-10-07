@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var getWeekNumber = require("../../utils/date.js")();
 
 var GoalSchema = new Schema({
 	focus: {
@@ -7,8 +8,10 @@ var GoalSchema = new Schema({
 		required: 'You must enter a focus'
 	},
 	week: {
-		type: Date,
-		default: Date.now
+		type: Number,
+		default: function() {
+			return new Date().getWeekNumber();
+		}
 	},
 	why: {
 		type: String

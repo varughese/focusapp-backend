@@ -1,11 +1,12 @@
-var mongoose = require('mongoose'),
-	Goal = mongoose.model('Goals');
+var mongoose = require('mongoose');
+var Goal = mongoose.model('Goals');
+
 
 exports.list_all_goals = function(req, res) {
 	Goal.find({}, function(err, goal) {
 		if (err)
 			res.send(err);
-		
+
 		res.json({goals: goal});
 	});
 };
@@ -47,6 +48,6 @@ exports.delete_a_goal = function(req, res) {
 	}, function(err, goal) {
 		if (err)
 			res.send(err);
-		res.json({message: 'Goal successfully deleted'});
+		res.json({message: 'Goal successfully deleted', goal: goal});
 	});
 };
