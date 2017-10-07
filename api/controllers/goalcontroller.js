@@ -5,7 +5,8 @@ exports.list_all_goals = function(req, res) {
 	Goal.find({}, function(err, goal) {
 		if (err)
 			res.send(err);
-		res.json(goal);
+		
+		res.json({goals: goal});
 	});
 };
 
