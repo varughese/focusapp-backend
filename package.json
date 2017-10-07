@@ -1,0 +1,24 @@
+{
+  "name": "focusapp-backend",
+  "version": "1.0.0",
+  "description": "Backend REST server for the Focus android app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varughese/focusapp-backend.git"
+  },
+  "author": "Mathew Varughese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varughese/focusapp-backend/issues"
+  },
+  "homepage": "https://github.com/varughese/focusapp-backend#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.12.0"
+  }
+}
