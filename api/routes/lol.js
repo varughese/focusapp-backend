@@ -4,4 +4,9 @@ module.exports = function(apiRouter) {
 		res.send("Yo jason whats good my dog");
 	});
 
+	apiRouter.route('/eion')
+      .get(function(req, res) {
+  		res.send("Hey eion, make sure you see clegg");
+  	});
+
 };
