@@ -3,7 +3,7 @@ var Goal = mongoose.model('Goals');
 
 
 exports.list_all_goals = function(req, res) {
-	Goal.find({}).sort({week: 1}).exec(function(err, goal) {
+	Goal.find({}).sort({week: -1}).exec(function(err, goal) {
 		if (err)
 			res.send(err);
 
